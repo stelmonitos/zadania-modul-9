@@ -7,9 +7,38 @@
 
 </head>
 <body>
-    <script>
+<script> 
+    const salaries = [2000, 3000, 1500, 6000, 3000];
+    console.log('salaries:', salaries);
+    let sum = 0;
+    let highestSalary = salaries[0];
+    let lowestSalary = salaries[0];
+    
+    for(let salary of salaries){
+        sum += salary;
+    }
+    if(highestSalary < salaries[1]){
+        highestSalary = salaries[1]
+    }if(highestSalary < salaries[2]){
+        highestSalary = salaries[2]
+    }if(highestSalary < salaries[3]){
+        highestSalary = salaries[3]
+    }if(highestSalary < salaries[4]){
+        highestSalary = salaries[4]
+    }
+    if(lowestSalary > salaries[1]){
+        lowestSalary = salaries[1]
+    }if(lowestSalary > salaries[2]){
+        lowestSalary = salaries[2]
+    }if(lowestSalary > salaries[3]){
+        lowestSalary = salaries[3]
+    }if(lowestSalary > salaries[4]){
+        lowestSalary = salaries[4]
+    }
+    console.log('highestSalary:', highestSalary);
+    console.log('lowestSalary:', lowestSalary);
+    console.log('sum:', sum)
 
-
-    </script>
+</script>
 </body>
 </html>
