@@ -8,25 +8,24 @@
 </head>
 <body>
 <script> 
-const persons = {
-  john: 2000,
-  amanda: 3000,
-  thomas: 1500,
-  james: 6000,
-  claire: 3000
-};
-const salaries = Object.values(persons);
-
-let sum = 0;
-let highestSalary = salaries[0];
-let lowestSalary = salaries[0];
-
-for(let salary of salaries){
-    sum += salary
-    if(salary > highestSalary) highestSalary = salary;
-    if(salary < lowestSalary) lowestSalary = salary;
-    console.log('lowestSalary:', lowestSalary, 'highestSalary:',highestSalary, 'sum:', sum)
-}
+    const tags = ['news', 'code', 'news', 'sport', 'hot', 'news', 'code'];
+    let uniqueTags = {};
+    
+    for(const tag of tags){
+        if(!uniqueTags[tag]){
+            uniqueTags[tag] = {appearances: 1};
+        } else {
+            uniqueTags[tag].appearances++
+        } 
+        
+        console.log('in loop', !uniqueTags[tag])    
+    }
+    console.log(uniqueTags)
 </script>
 </body>
+if(!uniqueTags[tag]){
+            uniqueTags[tag] = 1;
+        } else {
+            uniqueTags[tag]++;
+        }
 </html>
