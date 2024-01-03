@@ -8,24 +8,17 @@
 </head>
 <body>
 <script> 
-    const tags = ['news', 'code', 'news', 'sport', 'hot', 'news', 'code'];
-    let uniqueTags = {};
-    
-    for(const tag of tags){
-        if(!uniqueTags[tag]){
-            uniqueTags[tag] = {appearances: 1};
-        } else {
-            uniqueTags[tag].appearances++
-        } 
-        
-        console.log('in loop', !uniqueTags[tag])    
+    function isThisObject(obj){
+        for(const paramId in obj) {
+            const param = obj[paramId]
+            console.log(paramId + ': ' + param);
+        }
     }
-    console.log(uniqueTags)
+    const obj = {
+  firstName: 'John',
+  lastName: 'Doe'
+}
+isThisObject(obj)
 </script>
 </body>
-if(!uniqueTags[tag]){
-            uniqueTags[tag] = 1;
-        } else {
-            uniqueTags[tag]++;
-        }
 </html>
