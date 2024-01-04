@@ -8,17 +8,18 @@
 </head>
 <body>
 <script> 
-    function isThisObject(obj){
-        for(const paramId in obj) {
-            const param = obj[paramId]
-            console.log(paramId + ': ' + param);
-        }
-    }
-    const obj = {
-  firstName: 'John',
-  lastName: 'Doe'
+function formatName(person){
+    const myArray = person.split(' ');
+    let name = myArray[0]
+    let ndName = myArray[1]
+    name = name.charAt(0).toUpperCase() + name.substr(1).toLowerCase();
+    ndName = ndName.charAt(0).toUpperCase() + ndName.substr(1).toLowerCase();
+    return name + ' ' + ndName;
 }
-isThisObject(obj)
+console.log(formatName('aMAnDa dOE')) // returns Amanda Doe
+console.log(formatName('AMANDA DOE')); // returns Amanda Doe
+console.log(formatName('john DOE')); // returns John Doe
 </script>
+
 </body>
 </html>
