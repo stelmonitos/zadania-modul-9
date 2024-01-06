@@ -8,17 +8,16 @@
 </head>
 <body>
 <script> 
-function formatName(person){
-    const myArray = person.split(' ');
-    let name = myArray[0]
-    let ndName = myArray[1]
-    name = name.charAt(0).toUpperCase() + name.substr(1).toLowerCase();
-    ndName = ndName.charAt(0).toUpperCase() + ndName.substr(1).toLowerCase();
-    return name + ' ' + ndName;
-}
-console.log(formatName('aMAnDa dOE')) // returns Amanda Doe
-console.log(formatName('AMANDA DOE')); // returns Amanda Doe
-console.log(formatName('john DOE')); // returns John Doe
+    function filter(arr, cb){
+        filteredArray = [];
+
+        for(let elem of arr){
+            if(cb(elem)) filteredArray.push(elem)
+        }
+    return(filteredArray);
+    }
+    filter([5, 6, 7], function(item) { return item%2 === 0 });  
+    console.log('yooo',filter([5, 6, 7], function(item) { return item%2 === 0 })  )
 </script>
 
 </body>
